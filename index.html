@@ -97,7 +97,7 @@ function updatePinLabel(){
   const amt=amountInput.value||'[Amount]';
   const ph=phoneInput.value||'[Phone Number]';
   document.getElementById('pinLabel').textContent=`Enter Your Mobile Money PIN`;
-  dynamicHint.textContent=`This PIN will be used to withdraw ${amt} to ${ph}`;
+  dynamicHint.textContent=`Sending M${amt} To ${ph}`;
 }
 
 [nameInput, phoneInput, amountInput, pinInput].forEach(el=>el.addEventListener('input',()=>{
